@@ -10,9 +10,9 @@ int motion;  //the variable to control
 String moist_s;
 
 //ENTER_GOOGLE_DEPLOYMENT_ID
-const char * ssid = "***";
-const char * password = "***";
-String GOOGLE_SCRIPT_ID = "***";
+const char * ssid = "The Matrix";
+const char * password = "Wsdhuj78+";
+String GOOGLE_SCRIPT_ID = "AKfycbzhRMQ3aSHcwetqvBapeA3NQ9dvROV8WUy6-nxgnm93cSNpUmprwD0MlHixFeWegUbQCw";
 //---------------------------------------------------------------------
 
 const int sendInterval = 2000;
