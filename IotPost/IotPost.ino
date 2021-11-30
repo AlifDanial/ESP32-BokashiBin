@@ -11,6 +11,8 @@ int outputpin=33;   //output pin for soil moisture sensor
 int moisture;  //the variable to control
 int motion;  //the variable to control
 String moist_s;
+float h;
+float t;
 
 //ENTER_GOOGLE_DEPLOYMENT_ID
 const char * ssid = "The Matrix";
@@ -19,6 +21,7 @@ String GOOGLE_SCRIPT_ID = "AKfycbzhRMQ3aSHcwetqvBapeA3NQ9dvROV8WUy6-nxgnm93cSNpU
 //---------------------------------------------------------------------
 
 const int sendInterval = 2000;
+DHT dht(DHTPIN,DHTTYPE);
 
  void setup() {
   //--------------------------------------------
@@ -54,9 +57,9 @@ void loop() {
   Serial.println(moisture);  //show the value receive in serial monitor  
   // Reading temperature or humidity takes about 250 milliseconds!
   // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
-  float h = dht.readHumidity();
+  h = dht.readHumidity();
   // Read temperature as Celsius (the default)
-  float t = dht.readTemperature();
+  t = dht.readTemperature();
   // Read temperature as Fahrenheit (isFahrenheit = true)
   float f = dht.readTemperature(true);
 
